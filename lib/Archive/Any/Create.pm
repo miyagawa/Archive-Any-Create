@@ -1,7 +1,7 @@
 package Archive::Any::Create;
 
 use strict;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Exception::Class 'Archive::Any::Create::Error';
 use UNIVERSAL::require;
@@ -83,7 +83,42 @@ Archive::Any::Create - Abstract API to create archives (tar.gz and zip)
 
 =head1 DESCRIPTION
 
-Archive::Any::Create is
+Archive::Any::Create is a wrapper module to create tar/tar.gz/zip
+files with a single easy-to-use API.
+
+=head1 METHODS
+
+=over 4
+
+=item new
+
+Create new Archive::Any::Create object. No parameters.
+
+=item container($dir)
+
+Specify a top-level directory (or folder) to contain multiple
+files. Not necessary but recommended to create a good-manner archive
+file.
+
+=item add_file($file, $data)
+
+Add a file that contains C<$data> as its content. C<$file> can be a
+file in the nested subdirectory.
+
+=item write_file($filename)
+
+Write an archive file named C<$filename>. This method is DWIMmy, in
+the sense that it automatically dispatches archiving module based on
+its filename. So, C<< $archive->write_file("foo.tar.gz") >> will
+create a tarball and C<< $archive->write_file("foo.zip") >> will
+create a zip file with the same contents.
+
+=item write_filehandle($fh, $format)
+
+Write an archive data stream into filehandle. C<$format> is either,
+L<tar>, L<tar.gz> or L<zip>.
+
+=back
 
 =head1 AUTHOR
 
