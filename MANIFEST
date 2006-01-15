@@ -7,3 +7,4 @@ MANIFEST			This list of files
 t/00_compile.t
 t/01_tar.t
 t/02_zip.t
+META.yml                                 Module meta-data (added by MakeMaker)

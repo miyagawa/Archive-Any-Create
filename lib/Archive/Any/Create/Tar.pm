@@ -1,7 +1,7 @@
 package Archive::Any::Create::Tar;
 use strict;
 
-use IO::Zlib;
+use PerlIO::gzip;
 use Archive::Tar;
 
 sub init {
