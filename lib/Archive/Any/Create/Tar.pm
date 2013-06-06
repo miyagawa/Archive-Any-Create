@@ -1,7 +1,6 @@
 package Archive::Any::Create::Tar;
 use strict;
 
-use PerlIO::gzip;
 use Archive::Tar;
 
 sub init {
@@ -25,19 +24,14 @@ sub add_file {
 
 sub write_file {
     my $self = shift;
-    my($file) = @_;
-    $self->{tar}->write($file, $self->{comp}, $self->{container})
-        or throw Archive::Any::Create::Error(error => $self->{tar}->error);
-    1;
+    return $self->write_filehandle(@_); # Accepts files or handles
 }
 
 sub write_filehandle {
     my $self = shift;
     my($fh)  = @_;
-    if ($self->{comp}) {
-        binmode $fh, ":gzip";
-    }
-    $self->{tar}->write($fh, 0, $self->{container})
+    my $comp = $self->{comp} ? COMPRESS_GZIP : undef;
+    $self->{tar}->write($fh, $comp, $self->{container})
         or throw Archive::Any::Create::Error(error => $self->{tar}->error);
     1;
 }
