@@ -11,9 +11,7 @@ use ExtUtils::MakeMaker 6.30;
 my %WriteMakefileArgs = (
   "ABSTRACT" => "Abstract API to create archives (tar.gz and zip)",
   "AUTHOR" => "Tatsuhiko Miyagawa <miyagawa\@bulknews.net>",
-  "BUILD_REQUIRES" => {
-    "ExtUtils::MakeMaker" => 0
-  },
+  "BUILD_REQUIRES" => {},
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
   },
@@ -25,12 +23,13 @@ my %WriteMakefileArgs = (
     "Archive::Tar" => 0,
     "Archive::Zip" => 0,
     "Exception::Class" => 0,
-    "PerlIO::gzip" => 0,
-    "Test::More" => "0.32",
+    "IO::Zlib" => 0,
     "UNIVERSAL::require" => 0
   },
-  "TEST_REQUIRES" => {},
-  "VERSION" => "0.02",
+  "TEST_REQUIRES" => {
+    "Test::More" => "0.90"
+  },
+  "VERSION" => "0.03",
   "test" => {
     "TESTS" => "t/*.t"
   }

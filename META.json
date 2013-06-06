@@ -24,11 +24,6 @@
       ]
    },
    "prereqs" : {
-      "build" : {
-         "requires" : {
-            "ExtUtils::MakeMaker" : "0"
-         }
-      },
       "configure" : {
          "requires" : {
             "ExtUtils::MakeMaker" : "6.30"
@@ -44,9 +39,13 @@
             "Archive::Tar" : "0",
             "Archive::Zip" : "0",
             "Exception::Class" : "0",
-            "PerlIO::gzip" : "0",
-            "Test::More" : "0.32",
+            "IO::Zlib" : "0",
             "UNIVERSAL::require" : "0"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::More" : "0.90"
          }
       }
    },
@@ -62,8 +61,9 @@
          "web" : "https://github.com/miyagawa/Archive-Any-Create"
       }
    },
-   "version" : "0.02",
+   "version" : "0.03",
    "x_contributors" : [
+      "Jeffrey Ryan Thalhammer <jeff@imaginative-software.com>",
       "miyagawa <miyagawa@65690182-5df0-0310-9871-95da5a3706e7>"
    ]
 }

@@ -1,7 +1,7 @@
 package Archive::Any::Create;
 
 use strict;
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use Exception::Class 'Archive::Any::Create::Error';
 use UNIVERSAL::require;

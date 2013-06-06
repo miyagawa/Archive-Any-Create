@@ -2,6 +2,9 @@ Revision history for Perl extension Archive::Any::Create
 
 {{$NEXT}}
 
+0.03  2013-06-06 16:19:58 JST
+        - Use Archive::Tar's own compression (thaljef)
+
 0.02  2006-01-15T12:28:58Z
         - Oops, document.
 
