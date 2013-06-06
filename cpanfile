@@ -1,10 +1,10 @@
 requires 'Archive::Tar';
 requires 'Archive::Zip';
 requires 'Exception::Class';
-requires 'PerlIO::gzip';
-requires 'Test::More', '0.32';
+requires 'IO::Zlib';
 requires 'UNIVERSAL::require';
 
-on build => sub {
-    requires 'ExtUtils::MakeMaker';
+on test => sub {
+    requires 'Test::More', '0.90';
 };
+
