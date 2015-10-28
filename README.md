@@ -54,11 +54,11 @@ files with a single easy-to-use API.
 
 # AUTHOR
 
-Tatsuhiko Miyagawa <miyagawa@bulknews.net>
+Tatsuhiko Miyagawa &lt;miyagawa@bulknews.net>
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
 
 # SEE ALSO
 
-[Archive::Any](http://search.cpan.org/perldoc?Archive::Any), [Archive::Tar](http://search.cpan.org/perldoc?Archive::Tar), [Archive::Zip](http://search.cpan.org/perldoc?Archive::Zip)
+[Archive::Any](https://metacpan.org/pod/Archive::Any), [Archive::Tar](https://metacpan.org/pod/Archive::Tar), [Archive::Zip](https://metacpan.org/pod/Archive::Zip)
